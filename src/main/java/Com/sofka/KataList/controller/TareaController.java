@@ -15,10 +15,10 @@ public class TareaController {
     private TareaService tareaService;
 
     @GetMapping()
-    public List<TareaModel> listaTarea() {
-
+    public List<TareaModel> listadeTareas() {
         return this.tareaService.listaTareas();
     }
+
     @PostMapping()
     public TareaModel guardarTareas(@RequestBody TareaModel tareaModel) {
         return this.tareaService.guardarTarea(tareaModel);
@@ -30,12 +30,12 @@ public class TareaController {
     }
 
     @DeleteMapping(path = "/del/{id}")
-    public String eliminarTareas(@PathVariable("id") Long id){
-        boolean ok=tareaService.eliminarTarea(id);
+    public String eliminarTareas(@PathVariable("id") Long id) {
+        boolean ok = tareaService.eliminarTarea(id);
         if (ok) {
-            return "Se elimino la tarea";
-        }else {
-            return "Ocurrio un error";
+            return "Se elimino la tarea correctamente";
+        } else {
+            return "Ocurrio un error en ";
         }
 
     }

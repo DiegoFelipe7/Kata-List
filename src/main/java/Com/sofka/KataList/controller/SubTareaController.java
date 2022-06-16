@@ -17,9 +17,9 @@ public class SubTareaController {
 
     @GetMapping()
     public List<SubTareasModel> listasubTarea() {
-
         return this.subTareasService.listaSubTareas();
     }
+
     @PostMapping()
     public SubTareasModel guardarsubTareas(@RequestBody SubTareasModel subTareasModel) {
         return this.subTareasService.guardarSubTareas(subTareasModel);
@@ -31,11 +31,11 @@ public class SubTareaController {
     }
 
     @DeleteMapping(path = "/del/{id}")
-    public String eliminarsubTareas(@PathVariable("id") Long id){
-        boolean ok=this.subTareasService.eliminarSubTarea(id);
+    public String eliminarsubTareas(@PathVariable("id") Long id) {
+        boolean ok = this.subTareasService.eliminarSubTarea(id);
         if (ok) {
             return "Se elimino la tarea";
-        }else {
+        } else {
             return "Ocurrio un error";
         }
 
