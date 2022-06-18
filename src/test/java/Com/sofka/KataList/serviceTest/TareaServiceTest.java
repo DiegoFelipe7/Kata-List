@@ -20,7 +20,7 @@ public class TareaServiceTest {
     TareasRepository tareasRepository;
 
     @Test
-    public void testGuardarUsuario(){
+    public void testGuardarTarea(){
         TareaModel tareaModel=new TareaModel("Deportes");
         TareaModel tareaModel1 = tareasRepository.save(tareaModel);
         assertNotNull(tareaModel1);
@@ -28,7 +28,7 @@ public class TareaServiceTest {
 
 
     @Test
-    public void testListarUsuarios(){
+    public void testListarTarea(){
         List<TareaModel> usuarioModelList=(List<TareaModel>) tareasRepository.findAll();
         assertThat(usuarioModelList).size().isGreaterThan(0);
     }
