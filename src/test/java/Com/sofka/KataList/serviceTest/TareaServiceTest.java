@@ -18,7 +18,6 @@ import static org.junit.jupiter.api.Assertions.*;
 public class TareaServiceTest {
     @Autowired
     TareasRepository tareasRepository;
-
     @Test
     public void testGuardarTarea(){
         TareaModel tareaModel=new TareaModel("Deportes");

@@ -26,6 +26,7 @@ public class TareaModel {
     private String nombre;
     /**
      * punto de enlaze con la clase subtarea
+     * 
      * una tarea tiene muchas subtareas
      */
     @OneToMany(mappedBy = "id_subtareas",
