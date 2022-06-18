@@ -47,7 +47,9 @@ public class TareaModel {
         this.id = id;
         this.nombre = nombre;
     }
-
+    public TareaModel( String nombre) {
+        this.nombre = nombre;
+    }
     public TareaModel(){
 
     }
