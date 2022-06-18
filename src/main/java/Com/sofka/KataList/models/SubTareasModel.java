@@ -43,6 +43,13 @@ public class SubTareasModel {
         this.id_subtareas = id_subtareas;
     }
 
+    public SubTareasModel( String nombre, String estado, TareaModel id_subtareas) {
+        this.nombre = nombre;
+        this.estado = estado;
+        this.id_subtareas = id_subtareas;
+    }
+
+
     public SubTareasModel() {
 
     }
